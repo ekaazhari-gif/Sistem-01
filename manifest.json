@@ -1,14 +1,14 @@
 {
   "name": "Sistem Pemantauan Projek JKN Perlis",
-  "short_name": "SPP",
+  "short_name": "SPP JKNPs",
   "description": "Papan Pemuka Pemantauan Projek Bersepadu",
-  "start_url": "index.html",
+  "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#0b1120",
   "theme_color": "#0b1120",
   "icons": [
     {
-      "src": "icon-512.png",
+      "src": "./icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
