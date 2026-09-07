@@ -1,51 +1,43 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistem Pemantauan Projek JKN Perlis</title>
-    
-    <!-- Meta PWA -->
-    <meta name="theme-color" content="#0b1120">
-    <link rel="manifest" href="./manifest.json">
-    <link rel="icon" type="image/png" href="./icon-512.png">
-    <link rel="apple-touch-icon" href="./icon-512.png">
-
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: #0b1120;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0a0f1a">
+  <title>Sistem Pemantauan Projek PKDLMS</title>
+  
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="icon-512.png">
+  <link rel="apple-touch-icon" href="icon-512.png">
+  
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: #0a0f1a;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Gantikan URL di bawah dengan URL Google Apps Script anda -->
-    <iframe src="URL_WEB_APP_ANDA" allowfullscreen></iframe>
+  <iframe src="https://script.google.com/macros/s/AKfycbzVS6LN-JkylD_9txjhGDvraPO9YjGX8puUTFYrETciPnSGFr3QBlFc5_5oN2A0MtoDkA/exec" allowfullscreen></iframe>
 
-    <!-- Pendaftaran Service Worker -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
-                    .then(registration => {
-                        console.log('ServiceWorker berjaya didaftarkan:', registration.scope);
-                    })
-                    .catch(error => {
-                        console.error('Pendaftaran ServiceWorker gagal:', error);
-                    });
-            });
-        }
-    </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => console.log('Service Worker berjaya didaftarkan.', reg.scope))
+          .catch(err => console.error('Pendaftaran Service Worker gagal:', err));
+      });
+    }
+  </script>
 </body>
 </html>
